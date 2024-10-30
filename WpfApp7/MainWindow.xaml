@@ -7,6 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TabControl HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="772">
+            <TabItem Header="меню">
+                <Grid Background="#FFE5E5E5">
+                    <ListView Name="asd" HorizontalAlignment="Left" Height="253" Margin="106,90,0,0" VerticalAlignment="Top" Width="536" >
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="блюда" DisplayMemberBinding="{Binding Path=[0]}"/>
+                                <GridViewColumn Header="цена" DisplayMemberBinding="{Binding Path=[1]}"/>
+                                
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <TextBlock HorizontalAlignment="Left" Margin="240,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="283" RenderTransformOrigin="0.341,0.519" Text="приветствие &#xD;&#xA;ознакомление с меню" FontWeight="Bold" FontSize="18"/>
+                   
+                    <Button Content="далее" HorizontalAlignment="Left" Margin="669,341,0,0" VerticalAlignment="Top" Width="75" FontSize="20" FontWeight="Bold"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="доп программы">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>

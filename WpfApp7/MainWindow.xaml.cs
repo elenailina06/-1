@@ -23,6 +23,13 @@ namespace WpfApp7
         public MainWindow()
         {
             InitializeComponent();
+            List<string[]> abvg = new List <string[]>();
+            abvg.Add(new string[] { "шашлык", "250" });
+            abvg.Add(new string[] { "роллы", "500" });
+            abvg.Add(new string[] { "пицца", "450" });
+            asd.ItemsSource = abvg;
+
         }
+
     }
 }
