@@ -23,13 +23,23 @@ namespace WpfApp7
         public MainWindow()
         {
             InitializeComponent();
-            List<string[]> abvg = new List <string[]>();
-            abvg.Add(new string[] { "шашлык", "250" });
-            abvg.Add(new string[] { "роллы", "500" });
-            abvg.Add(new string[] { "пицца", "450" });
-            asd.ItemsSource = abvg;
+            List<string[]> data = new List<string[]>();
+            data.Add(new string[] { "Роллы ", "600" });
+            data.Add(new string[] { "Пицца", " 500" });
+            data.Add(new string[] { "шашлык", " 550" });
 
+            asd.ItemsSource = data;
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            tabControl11.SelectedItem = tabControl11.Items[0];
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            tabControl11.SelectedItem = tabControl11.Items[1];
+
+        }
     }
 }

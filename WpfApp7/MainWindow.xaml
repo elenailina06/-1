@@ -7,25 +7,55 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TabControl HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="772">
-            <TabItem Header="меню">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="137*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl Name="tabControl11" HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="759" Grid.ColumnSpan="2">
+            <TabItem Header="Меню" Height="22" VerticalAlignment="Top">
+
                 <Grid Background="#FFE5E5E5">
-                    <ListView Name="asd" HorizontalAlignment="Left" Height="253" Margin="106,90,0,0" VerticalAlignment="Top" Width="536" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="173*"/>
+                        <ColumnDefinition Width="12*"/>
+                        <ColumnDefinition Width="568*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Left" Margin="9,10,0,0" TextWrapping="Wrap" Text="Здраствуйте!  Ознакомтесь с меню" VerticalAlignment="Top" Height="47" Width="287" Grid.ColumnSpan="3"/>
+                    <ListView Name="asd" HorizontalAlignment="Left" Height="334" Margin="10,37,0,0" VerticalAlignment="Top" Width="286" Grid.ColumnSpan="3">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="блюда" DisplayMemberBinding="{Binding Path=[0]}"/>
                                 <GridViewColumn Header="цена" DisplayMemberBinding="{Binding Path=[1]}"/>
-                                
+
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <TextBlock HorizontalAlignment="Left" Margin="240,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="283" RenderTransformOrigin="0.341,0.519" Text="приветствие &#xD;&#xA;ознакомление с меню" FontWeight="Bold" FontSize="18"/>
-                   
-                    <Button Content="далее" HorizontalAlignment="Left" Margin="669,341,0,0" VerticalAlignment="Top" Width="75" FontSize="20" FontWeight="Bold"/>
+                    <Button Content = "ДАЛЕЕ"  HorizontalAlignment="Left" Margin="483,351,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2" Grid.Column="2" />
                 </Grid>
             </TabItem>
-            <TabItem Header="доп программы">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="Развлекательные программы">
+                <Grid Background="#FFE5E5E5" Margin="10,6,0,0">
+                    <TextBlock HorizontalAlignment="Left" Margin="231,21,0,0" TextWrapping="Wrap" Text="Развлекательне программы" VerticalAlignment="Top" Height="24" Width="228" TextDecorations="Underline" FontStyle="Italic"/>
+                    <Label Content="БАНКЕТЫ" HorizontalAlignment="Left" Margin="264,50,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.159,-0.318" FontWeight="Bold" FontStyle="Italic"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="46,224,0,0" VerticalAlignment="Top" Width="120">
+                        <ComboBoxItem Content="новогодний корпоратив "/>
+                        <ComboBoxItem Content="девичник"/>
+                        <ComboBoxItem Content="дни рождения"/>
+                    </ComboBox>
+                        <Button x:Name="tabControl1" Content="НАЗАД" HorizontalAlignment="Left" Margin="18,345,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+                    <Button Content="ОТПРАВИТЬ" HorizontalAlignment="Left" Margin="648,345,0,0" VerticalAlignment="Top" Width="75"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="46,87,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="46,143,0,0" TextWrapping="Wrap" Text="Телефон" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="46,208,0,0" TextWrapping="Wrap" Text="Тип праздника" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="264,99,0,0" TextWrapping="Wrap" Text="ВЫБЕРИТЕ АКЦИЮ" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <RadioButton Content="30% скидка для именинника" HorizontalAlignment="Left" Margin="244,137,0,0" VerticalAlignment="Top"/>
+                    <RadioButton Content="заказ от 2тыс+десерт в подарок" HorizontalAlignment="Left" Margin="244,181,0,0" VerticalAlignment="Top" Height="38"/>
+                    <RadioButton Content="кэшбек 20% на самовывоз" HorizontalAlignment="Left" Margin="244,224,0,0" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="545,99,0,0" TextWrapping="Wrap" Text="ВЫБЕРИТЕ ДАТУ" VerticalAlignment="Top" Height="19" Width="108" FontWeight="Bold"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="545,137,0,0" VerticalAlignment="Top" Height="27"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="46,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="46,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                </Grid>
             </TabItem>
         </TabControl>
 
